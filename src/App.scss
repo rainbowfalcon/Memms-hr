@@ -1,0 +1,49 @@
+main {
+    position: relative;
+
+    .bg_overlaye {
+        background-image: url('./assets/img/4880206.jpg');
+        background-size: cover;
+        width: 100%;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        background-position: center center;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+}
+
+li.nav-item a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background: #226fff;
+    transition: 200ms width;
+}
+li.nav-item a.active::after {
+    width: 100%;
+}
+
+li.nav-item:hover>a::after {
+    transition: 200ms;
+    width: 100%;
+
+}
+.bg_gradient{
+    background: #1c1174;
+    background: linear-gradient(to right, #041a2cfa, #4037c3d6);
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-image: url('./assets/img/bg-tex.png');
+    }
+}
